@@ -2,6 +2,7 @@
 @import 'theme/fonts';
 @import 'theme/variables';
 
+
 body {
     color: #000000;
     background-color: #ffffff;
@@ -88,9 +89,6 @@ body {
 // MODE 
 .dark-mode {
     background-color: #000000!important;
-    &.header-navigation {
-        background-color: transparent!important;
-    }
     .author-technology {
         background-color: #ffffff;
         &__text {
@@ -129,9 +127,6 @@ body {
 
 .light-mode {
     background-color: #ffffff!important;
-    &.header-navigation {
-        background-color: transparent!important;
-    }
     * {
         color: #000000!important;
         fill: #000000!important;
@@ -171,7 +166,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px 0 100px;
+    padding: 15px 100px 15px 100px;
+    transform: translateY(-100%);
+    transition: transform .35s ease-in;
 }
 .navigation-logo {
     color: #000000;
@@ -198,6 +195,7 @@ body {
     min-height: 100vh;
     position: relative;
     z-index: 101;
+    overflow: hidden;
     .container {
         min-height: 100vh;
         display: flex;

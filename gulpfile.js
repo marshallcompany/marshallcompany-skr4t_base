@@ -64,7 +64,8 @@ function copyFile() {
         './src/libs/**/*.js',
         './src/libs/**/*.css',
         './src/**/*.html',
-        './src/**/*.+(otf|ttf|woff|woff2|eot)'
+        './src/**/*.+(otf|ttf|woff|woff2|eot)',
+        './src/**/*.+(mov|mp4)'
     ], { base: './src' })
     .pipe(dest('./dist'));
 }

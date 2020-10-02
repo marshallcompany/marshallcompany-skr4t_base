@@ -160,13 +160,13 @@ const rangeChange = range.onchange = () => {
     document.querySelector('.reading-speed__stop').style.opacity = '1';
   }
   if (Number(range.value) === 150) {
-    handleMarquee(3.5);
+    handleMarquee(3);
   } else if (Number(range.value) === 300) {
-    handleMarquee(4.5);
+    handleMarquee(4);
   } else if (Number(range.value) === 450) {
-    handleMarquee(5.5);
+    handleMarquee(5);
   } else if (Number(range.value) === 600) {
-    handleMarquee(7.5);
+    handleMarquee(6);
   } else if (Number(range.value) === 0) {
     handleMarquee(Number(range.value));
   }
@@ -275,5 +275,13 @@ telInput.addEventListener('keypress', (event) => {
   const inputChar = String.fromCharCode(event.charCode);
   if (event.keyCode !== 8 && !pattern.test(inputChar)) {
     event.preventDefault();
+  }
+})
+
+window.addEventListener('scroll', (event) => {
+  if (this.scrollY > document.querySelector('.header').offsetHeight) {
+    document.querySelector('.header-navigation').style.transform = 'translateY(0)'
+  } else {
+    document.querySelector('.header-navigation').style.transform = 'translateY(-100%)'
   }
 })
