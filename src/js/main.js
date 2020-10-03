@@ -209,36 +209,38 @@ function marqueeStop() {
   });
 }
 
+let clickEvent = 0;
 function scrollToElement(element) {
-  if (element === '.main') {
-    document.querySelector('.main').style.display = 'block';
+  if (element === '.main' && clickEvent === 0) {
+    clickEvent = 1;
+    document.querySelector('.main').setAttribute(
+      'style',
+      'position: relative; height: auto; overflow: auto;');
+    // INIT SWIPER JS
+    const videoSwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 'auto',
+      resistance: true,
+      resistanceRatio: 0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+    videoSwiper.on('transitionStart', function (event) {
+      const videoElement = document.querySelectorAll('.video-clip');
+      videoElement.forEach(el => {
+        el.pause();
+        el.currentTime = 0;
+      })
+      videoElement[event.snapIndex].play();
+    });
   }
   document.querySelector(element).scrollIntoView({
     behavior: 'smooth'
   });
 }
-
-// SWIPER JS
-const videoSwiper = new Swiper('.swiper-container', {
-  direction: 'horizontal',
-  loop: false,
-  slidesPerView: 'auto',
-  resistance: true,
-  resistanceRatio: 0,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-})
-
-videoSwiper.on('transitionStart', function (event) {
-  const videoElement = document.querySelectorAll('.video-clip');
-  videoElement.forEach(el => {
-    el.pause();
-    el.currentTime = 0;
-  })
-  videoElement[event.snapIndex].play();
-});
 
 // FORM
 const telInput = document.querySelector('#inputPhone');
@@ -247,7 +249,7 @@ const nameInput = document.querySelector('#inputName');
 const radioInput = document.querySelectorAll('input[type="radio"]');
 
 const iti = window.intlTelInput(telInput, {
-  utilsScript: '../libs/intlTelInput/utils.js',
+  utilsScript: 'libs/intlTelInput/utils.js',
   initialCountry: 'ru'
 })
 

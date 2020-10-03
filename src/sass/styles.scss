@@ -232,7 +232,9 @@ body {
 }
 // MAIN
 .main {
-    // display: none;
+    position: fixed;
+    height: 0;
+    overflow: hidden;
     background: linear-gradient(211.1deg, #5D24D5 0%, #2F17C0 100%);
 }
 .information {

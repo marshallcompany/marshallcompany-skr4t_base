@@ -322,6 +322,9 @@ body {
   margin-bottom: 20px; }
 
 .main {
+  position: fixed;
+  height: 0;
+  overflow: hidden;
   background: -o-linear-gradient(238.9deg, #5D24D5 0%, #2F17C0 100%);
   background: linear-gradient(211.1deg, #5D24D5 0%, #2F17C0 100%); }
 
