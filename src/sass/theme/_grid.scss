@@ -1,7 +1,5 @@
 /* = CONTAINER = */
 .container {
-	padding-left: 15px;
-	padding-right: 15px;
 	margin:0 auto;
 	position: relative;
 	width: 100%;
@@ -29,11 +27,13 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 	.container{
 		max-width: 992px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 @media screen and (min-width: 1200px) {
 	.container{
-		max-width: 1200px;
+		max-width: 1048px;
 	}
 }
 /* = CONTAINER END = */

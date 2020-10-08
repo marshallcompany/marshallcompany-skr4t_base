@@ -211,7 +211,6 @@ body {
   font-family: "Soyuz Grotesk Bold";
   font-size: 36px;
   color: #000000;
-  max-width: 1048px;
   width: 100%;
   margin: 0 auto; }
 
@@ -463,7 +462,6 @@ body {
     margin-bottom: 75px; }
 
 .description-schema {
-  max-width: 1048px;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -496,7 +494,6 @@ body {
   font-size: 18px; }
 
 .description-whom {
-  max-width: 1048px;
   width: 100%;
   margin: 0 auto; }
 
@@ -549,7 +546,6 @@ body {
   margin-bottom: 75px; }
 
 .author-wrapper {
-  max-width: 1048px;
   width: 100%;
   margin: 0 auto;
   padding-top: 150px;
@@ -597,7 +593,6 @@ body {
     font-size: 18px; }
 
 .video {
-  max-width: 1048px;
   width: 100%;
   height: 550px;
   background-color: #C9C9C9; }
@@ -913,8 +908,6 @@ input[type="tel"] {
 
 /* = CONTAINER = */
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
   position: relative;
   width: 100%; }
@@ -938,11 +931,13 @@ input[type="tel"] {
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .container {
-    max-width: 992px; } }
+    max-width: 992px;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px; } }
+    max-width: 1048px; } }
 
 /* = CONTAINER END = */
 /* = MEDIA = */
@@ -988,8 +983,7 @@ input[type="tel"] {
   .skr4t-start__text {
     font-size: 16px; }
   .text {
-    font-size: 30px;
-    max-width: 865px; }
+    font-size: 30px; }
   .information {
     min-height: inherit; }
     .information .container {
