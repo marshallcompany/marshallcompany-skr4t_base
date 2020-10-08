@@ -213,6 +213,7 @@ let clickEvent = 0;
 function scrollToElement(element) {
   if (element === '.main' && clickEvent === 0) {
     clickEvent = 1;
+    document.querySelectorAll('.video-clip')[0].play()
     document.querySelector('.main').setAttribute(
       'style',
       'position: relative; height: auto; overflow: auto;');

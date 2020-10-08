@@ -34,6 +34,9 @@
 @media screen and (min-width: 1200px) {
 	.container{
 		max-width: 1048px;
+		&.container_1200 {
+			max-width: 1200px;
+		}
 	}
 }
 /* = CONTAINER END = */
