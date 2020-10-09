@@ -227,6 +227,14 @@ function scrollToElement(element) {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          autoHeight: true
+        },
+        768: {
+          autoHeight: false
+        },
       }
     })
     videoSwiper.on('transitionStart', function (event) {

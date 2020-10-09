@@ -1,4 +1,16 @@
 /* = MEDIA = */
+@media (orientation: landscape) {
+  .skr4t-start{
+    bottom: 5px!important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skr4t-start__text {
+    text-align: center!important;
+  }
+}
 @media screen and (max-width:1400px){
   // VIDEO SWIPER
   .swiper-1 {
@@ -28,8 +40,6 @@
   }
   .after-description {
     max-width: 65%;
-    right: 5vw;
-    bottom: 5vw;
     .button {
       padding: 10px 5px;
     }
@@ -267,10 +277,6 @@
     padding-left: 15px;
     padding-bottom: 15px;
     max-width: 100%;
-    right: inherit;
-    border: none;
-    left: 0;
-    bottom: 0;
     .button {
       padding: 10px 5px;
     }
@@ -440,6 +446,18 @@
       font-size: 18px;
     }
   }
+  // SWIPER VIDEO
+  .swiper-1 {
+    height: auto;
+    .swiper-slide {
+      padding-top: 150px;
+      padding-right: 0;
+      padding-bottom: 50px; 
+    }
+  }
+  .after-description {
+    border: none;
+  }
 }
 @media screen and (max-width:667px){
   .after-description__item{
@@ -520,7 +538,10 @@
 }
 @media screen and (max-width:480px){
   .swiper-1 {
-    height: 80vw;
+    .swiper-slide {
+      padding-top: 75px;
+      padding-bottom: 25px;
+    }
     .swiper-button-prev{
       width: 35px;
       height: 35px;
@@ -554,9 +575,6 @@
 }
 @media screen and (max-width:375px){}
 @media screen and (max-width:360px){
-  .swiper-1 {
-    height: 90vw;
-  }
   .skr4t-start__text{
     br {
       display: none;
