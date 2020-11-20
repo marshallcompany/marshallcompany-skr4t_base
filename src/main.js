@@ -135,6 +135,18 @@ function mode() {
 }
 
 let clickEvent = 0;
+function swiperVideoHeight() {
+  if (window.innerWidth >= 992) {
+    if (document.querySelector('.header-navigation')) {
+      document.querySelector('.swiper-1').style.height = `
+        ${window.innerHeight - document.querySelector('.header-navigation').offsetHeight}px`;
+    } else {
+      document.querySelector('.swiper-1').style.height = `
+      ${window.innerHeight}px`;
+    }
+  }
+}
+
 function scrollToElement(element) {
   if (element === '.main' && clickEvent === 0) {
     clickEvent = 1;
@@ -143,16 +155,7 @@ function scrollToElement(element) {
       'style',
       'position: relative; height: auto; overflow: auto;');
     // INIT SWIPER JS
-    if (window.innerWidth > 992) {
-      if (document.querySelector('.header-navigation')) {
-        document.querySelector('.swiper-1').style.height = `
-          ${window.innerHeight - document.querySelector('.header-navigation').offsetHeight}px`;
-      } else {
-        document.querySelector('.swiper-1').style.height = `
-        ${window.innerHeight}px`;
-      }
-    }
-    
+    swiperVideoHeight();
     const videoSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: false,

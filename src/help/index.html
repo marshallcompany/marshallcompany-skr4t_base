@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-=edge">
+    <title>СКРЧТ 2.0</title>
+    <meta name="application-name" content="СКРЧТ 2.0"/>
+    <meta name="description" content="СКРЧТ 2.0">
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/icons/mstile-310x310.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-128x128.png" sizes="128x128" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="header-navigation mode light-mode">
+        <a href="/" class="navigation-logo">
+            Онлайн-школа
+            <span>ЦЕРЕБРУМ</span>
+        </a>
+        <button class="navigation-mode-button" onclick="mode()">
+            <svg class="navigation-mode-button__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C15.4477 0 15 0.447715 15 1V5C15 5.55228 15.4477 6 16 6C16.5523 6 17 5.55228 17 5V1C17 0.447715 16.5523 0 16 0ZM16 26C15.4477 26 15 26.4477 15 27V31C15 31.5523 15.4477 32 16 32C16.5523 32 17 31.5523 17 31V27C17 26.4477 16.5523 26 16 26ZM16 22C19.3137 22 22 19.3137 22 16C22 12.6863 19.3137 10 16 10C12.6863 10 10 12.6863 10 16C10 19.3137 12.6863 22 16 22ZM16 24C20.4183 24 24 20.4183 24 16C24 11.5817 20.4183 8 16 8C11.5817 8 8 11.5817 8 16C8 20.4183 11.5817 24 16 24ZM31 15C31.5523 15 32 15.4477 32 16C32 16.5523 31.5523 17 31 17H27C26.4477 17 26 16.5523 26 16C26 15.4477 26.4477 15 27 15H31ZM5 15C5.55228 15 6 15.4477 6 16C6 16.5523 5.55228 17 5 17H1C0.447716 17 0 16.5523 0 16C0 15.4477 0.447716 15 1 15H5ZM27.3137 27.3137C27.7042 26.9232 27.7042 26.29 27.3137 25.8995L24.4853 23.0711C24.0948 22.6805 23.4616 22.6805 23.0711 23.0711C22.6805 23.4616 22.6805 24.0948 23.0711 24.4853L25.8995 27.3137C26.29 27.7042 26.9232 27.7042 27.3137 27.3137ZM8.92893 8.92893C9.31945 8.5384 9.31945 7.90524 8.92893 7.51472L6.1005 4.68629C5.70998 4.29576 5.07681 4.29576 4.68629 4.68629C4.29577 5.07681 4.29577 5.70998 4.68629 6.1005L7.51472 8.92893C7.90524 9.31945 8.53841 9.31945 8.92893 8.92893ZM6.10048 27.3137C5.70995 27.7042 5.07679 27.7042 4.68626 27.3137C4.29574 26.9232 4.29574 26.29 4.68626 25.8995L7.51469 23.0711C7.90522 22.6805 8.53838 22.6805 8.9289 23.0711C9.31943 23.4616 9.31943 24.0948 8.92891 24.4853L6.10048 27.3137ZM24.4853 8.92893C24.0947 9.31945 23.4616 9.31945 23.071 8.92893C22.6805 8.5384 22.6805 7.90524 23.071 7.51472L25.8995 4.68629C26.29 4.29576 26.9232 4.29576 27.3137 4.68629C27.7042 5.07681 27.7042 5.70998 27.3137 6.1005L24.4853 8.92893Z" fill="black"/>
+            </svg>
+        </button>
+        <div class="date">
+            <p class="date__time">с 20:00 МСК</p>
+            <p class="date__month">хх сентября</p>
+        </div>
+    </section>
+    <section class="section-1 mode">
+        <div class="container">
+            <p class="text">
+                <span class="text__title">Последний шаг до конца регистрации на онлайн-марафон</span>
+                вам отправлено e-mail письмо <br>
+                для завершения регистрации подтвердите участие!
+            </p>
+            <p class="bonus">
+                <span class="bonus__label">+ ценный БОНУС:</span>
+                Интерактивный тест для определения текущего уровня вашего чтения и
+                методов увеличения скорости чтения на 30-50 слов в минуту!
+            </p>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="container">
+            <div class="steps">
+                <div class="steps__item">
+                    <img src="../assets/images/help/step-1.png" alt="step-1" class="steps__image">
+                    <div class="steps-description">
+                        <p class="steps-description__number">шаг 1</p>
+                        <p class="steps-description__text">
+                            Зайдите на свою почту <br>
+                            электронную почту
+                        </p>
+                    </div>
+                </div>
+                <div class="steps__item">
+                    <img src="../assets/images/help/step-2.png" alt="step-2" class="steps__image">
+                    <div class="steps-description">
+                        <p class="steps-description__number">шаг 2</p>
+                        <p class="steps-description__text">
+                            Найдите письмо от нас <br>
+                            и откройте его
+                        </p>
+                    </div>
+                </div>
+                <div class="steps__item">
+                    <img src="../assets/images/help/step-3.png" alt="step-2" class="steps__image">
+                    <div class="steps-description">
+                        <p class="steps-description__number">шаг 3</p>
+                        <p class="steps-description__text">
+                            Перейдите по ссылке <br>
+                            внутри письма
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="warning">
+                <img src="../assets/images/help/ava.png" alt="" class="warning__image">
+                <div class="warning-information">
+                    <p class="warning-information__text">
+                        Если Вы сразу не обнаружили наше письмо в своем почтовом ящике, обязательно проверьте папку “Спам” 
+                        и переместите его во “Входящие”.
+                    </p>
+                    <p class="warning-information__spam">
+                        Если письма нет и в спаме, напишите нам  об этом на почту 
+                        <a href="mailto:support@доменнаяпочта.net" class="warning-information__email-link">support@доменнаяпочта.net</a> 
+                        или
+                        <a href="/" class="warning-information__telegram-link">
+                            <span>телеграм</span>
+                            <svg viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.40598 5.69642L14.9043 0.49192C15.5308 0.265587 16.078 0.644754 15.875 1.59209L15.8762 1.59092L13.5778 12.4188C13.4075 13.1864 12.9513 13.3731 12.3132 13.0114L8.81315 10.4319L7.12498 12.0583C6.93832 12.2449 6.78082 12.4024 6.41915 12.4024L6.66765 8.84059L13.1543 2.98042C13.4367 2.73192 13.0913 2.59192 12.7192 2.83925L4.70299 7.88625L1.24732 6.80825C0.497151 6.57025 0.480818 6.05809 1.40598 5.69642Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
