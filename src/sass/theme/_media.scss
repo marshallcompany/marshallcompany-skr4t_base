@@ -1,23 +1,26 @@
 /* = MEDIA = */
-@media (orientation: landscape) {
-  .skr4t-start{
-    bottom: 5px!important;
+@media (orientation: landscape) and (max-width: 992px) {
+  .skr4t-start {
+    bottom: 5px !important;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    align-items: center;
-  }
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .skr4t-start__text {
-    text-align: center!important;
-  }
+    text-align: center !important; } 
 }
 @media screen and (max-width:1400px){
   // VIDEO SWIPER
   .swiper-1 {
-    width: 100%;
-    height: 60vw;
     .swiper-slide {
-      width: 90%;
+      padding-right: 75px;
     }
     .swiper-button-prev{
         width: 50px;
@@ -52,7 +55,10 @@
     font-size: 1.45vw;
   }
   .after-description__item {
-    font-size: 1.25vw;
+    font-size: 1.35vw;
+    &:before{
+      top: 4px;
+    }
   }
 }
 @media screen and (max-width:1200px){
@@ -68,24 +74,6 @@
   .text {
     font-size: 30px;
   }
-  .information {
-    min-height: inherit;
-    .container {
-      min-height: inherit;
-      padding-top: 150px;
-      padding-bottom: 250px;
-    }
-  }
-  .information-check {
-    font-size: 16px;
-    width: 40%;
-    br {
-      display: none;
-    }
-  }
-  .reading-speed {
-    padding-top: 100px;
-  }
   .description {
     padding-top: 50px;
   }
@@ -99,9 +87,7 @@
   .description-whom__title {
     font-size: 30px;
     margin-bottom: 75px;
-  }
-  .description-whom-list {
-    margin-bottom: 100px;
+    text-align: center;
   }
   .description-whom-item__label{ 
     font-size: 24px;
@@ -136,16 +122,6 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  .author-technology {
-    height: 60px;
-    width: 290px;
-    left: 50%;
-    top: 50px;
-    transform: translate(-50%, 0);
-  }
-  .author-technology__text {
-    transform: translate(-50%, -50%) rotate(0);
-  }
   .text {
     max-width: 100%;
     br {
@@ -155,20 +131,6 @@
   .text__title {
     display: block;
     width: inherit;
-  }
-  .information-check {
-    width: inherit;
-    right: 0;
-    br {
-      display: block;
-    }
-  }
-  .marquee {
-    height: 150px;
-    margin-bottom: 100px;
-  }
-  .marquee__text {
-    font-size: 40px;
   }
   .description-schema-image {
     height: 200px;
@@ -201,7 +163,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    .button {
+      margin-top: 25px;
+    }
   }
   .author-description-wrapper__name {
     margin-bottom: 20px;
@@ -217,9 +183,6 @@
     }
     &.bg-2 {
       align-self: center;
-    }
-    &.bg-3 {
-      align-self: flex-end;
     }
   }
   .video {
@@ -259,11 +222,14 @@
     font-size: 16px;
     width: 100%; 
   }
+  // SWIPER VIDEO
   .swiper-1 {
     .swiper-slide {
-      width: 100%;
+      padding-left: 75px;
+      padding-bottom: 10vw;
+      padding-top: 10vw;
       &::before {
-        background: rgba(0,0,0, 0.4);
+        background: rgba(0,0,0, 0.8);
       }
     }
   }
@@ -274,8 +240,7 @@
     top: 30px;
   }
   .after-description {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    padding-left: 10px;
     max-width: 100%;
     .button {
       padding: 10px 5px;
@@ -331,38 +296,6 @@
   .text {
     font-size: 24px;
   }
-  .information .container {
-    flex-direction: column;
-    padding-bottom: 25px;
-  }
-  .information-check {
-    width: 90%;
-    position: inherit;
-    right: inherit;
-    bottom: inherit;
-    text-align: center;
-    padding-top: 50px;
-    br{
-      display: none;
-    }
-  }
-  .marquee {
-    margin-bottom: 50px;
-  }
-  .range-wrapper {
-    margin-bottom: 25px;
-  }
-  .reading-speed{
-    padding-bottom: 50px;
-  }
-  .reading-speed-navigation {
-    position: inherit;
-    left: inherit;
-    bottom: inherit;
-    .container {
-      flex-direction: column;
-    }
-  }
   .description {
     padding-top: 0;
     .text {
@@ -372,6 +305,7 @@
   .description-schema{
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
   }
   .description-schema-image{
     height: 200px;
@@ -383,7 +317,9 @@
     margin-bottom: 15px;
   }
   .description-whom__title{
+    padding-top: 25px;
     margin-bottom: 25px;
+    font-size: 22px;
   }
   .description-whom-item__label{
     font-size: 18px;
@@ -446,24 +382,8 @@
       font-size: 18px;
     }
   }
-  // SWIPER VIDEO
-  .swiper-1 {
-    height: auto;
-    .swiper-slide {
-      padding-top: 150px;
-      padding-right: 0;
-      padding-bottom: 50px; 
-    }
-  }
-  .after-description {
-    border: none;
-  }
 }
-@media screen and (max-width:667px){
-  .after-description__item{
-    font-size: 12px;
-  }
-}
+@media screen and (max-width:667px){}
 @media screen and (max-width:640px){}
 @media screen and (max-width:568px){
   .text {
@@ -471,15 +391,6 @@
   }
   .text__title {
     font-size: 12px;
-  }
-  .information-check {
-    font-size: 14px;
-  }
-  .reading-speed {
-    padding-top: 50px;
-  }
-  .reading-speed__label {
-    margin-bottom: 50px;
   }
   .description{
     padding-bottom: 50px;
@@ -497,9 +408,6 @@
       font-size: 20px;
       text-align: center;
   }
-  .description-whom-list {
-    margin-bottom: 50px;
-  }
   .author-wrapper{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -512,12 +420,6 @@
     span{
       font-size: 14px;
     }
-  }
-  .marquee{
-    height: 100px;
-  }
-  .marquee__text{
-    font-size: 24px;
   }
   .after{
     margin-bottom: 50px;
@@ -537,10 +439,13 @@
   }
 }
 @media screen and (max-width:480px){
+  // SWIPER VIDEO
   .swiper-1 {
     .swiper-slide {
-      padding-top: 75px;
-      padding-bottom: 25px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 15vw;
+      padding-bottom: 15vw;
     }
     .swiper-button-prev{
       width: 35px;
@@ -555,10 +460,12 @@
     margin-bottom: 8px;
   }
   .after-description__item{
+    padding-left: 13px;
     margin-bottom: 5px;
   }
   .after-description{
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 @media screen and (max-width:414px){
@@ -573,7 +480,11 @@
     font-size: 12px;
   }
 }
-@media screen and (max-width:375px){}
+@media screen and (max-width:380px){
+  .skr4t-information__subtitle {
+    font-size: 35px;
+  }
+}
 @media screen and (max-width:360px){
   .skr4t-start__text{
     br {

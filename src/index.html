@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="./libs/intlTelInput/intlTelInput.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="header-navigation mode light-mode">
@@ -44,7 +44,7 @@
                 </svg>
         </button>
         <button class="button" onclick="scrollToElement('.registration')">
-            <span class="button__label">участие</span>
+            <span class="button__label">Записаться</span>
             <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
             </svg>
@@ -71,58 +71,39 @@
         </div>
     </header>
     <section class="main">
-        <section class="information mode">
-            <div class="author-technology">
-                <p class="author-technology__text">
-                    авторская технология повышения усвоения <br>
-                    информации и внимательности Ольги Фуст
-                </p>
-                <svg viewBox="0 0 25 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
-                </svg>
-            </div>
+        <section class="description mode">
             <div class="container">
-                <p class="text">
-                    <span class="text__title">задумайтесь</span>
-                    Ежедневно каждый человек <br> читает не менее 
-                    <span class="text__underline">1800 слов в течение дня:</span>
-                    это сообщения <br> в мессенджерах, заголовки новостей, статьи для личного <br> развития. 
-                    <span class="text__underline">Скорость чтения не растет</span>
-                    у человека после 23 <br> лет, а объем потребляемой информации каждый следующий <br>
-                    год жизни <span class="text__underline">увеличивается на 14 %.</span>
-                </p>
-                <p class="information-check">
-                    Проверь на себе технологию обучения Ольги Фуст и начни <br>
-                    менять свою информационную парадигму благодаря <br>
-                    бесплатному МАРАФОНУ «СКРЧТ 2.0»
-                </p>
-            </div>
-        </section>
-        <section class="reading-speed mode">
-            <div class="reading-speed__label">
-                <div class="container">
-                    <p class="text">
-                        <span class="text__title">небольшой интерактив</span>
-                        Проверьте скорость чтения. <br>
-                        покажите на что вы способны прямо сейчас
-                    </p>
-                </div>
-            </div>
-            <div class="marquee" id="marquee">
-                <div class="marquee__wrapper">
-                    <p class="marquee__text">Скачет Илья Муровец во всю конскую прыть. Его конь, Бурушка-Косматушка с горы на гору перескакивает, реки-озера перепрыгивает, холмы перелетает. Доскакали они до Брынских лесов, дальше Бурушке скакать нельзя: разлеглись болота зыбучие, конь по брюхо в воде тонет. Соскочил Илья с коня. Он левой рукой Бурушку поддерживает, а правой рукой дубы с корнем рвет, настилает через болото настилы дубовые. Тридцать верст Илья настилов настелил - до сих пор по ним люди добрые ездят.</p>
-                </div>
-            </div>
-            <div class="reading-speed-navigation">
-                <div class="container">
-                    <p class="reading-speed__number">Ваша скорость чтения:</p>
-                    <div class="range-wrapper">
-                        <input type="range" value="0" min="0" max="600" id="range" class="range">
-                        <p class="range-wrapper__value">~ value слов/минута</p>
+                <div class="description-whom">
+                    <h2 class="description-whom__title">Бесплатный марафон СКРЧТ 2.0 это про:</h2>
+                    <div class="description-whom-list">
+                        <div class="description-whom-item">
+                            <p class="description-whom-item__label">Взлет вашей карьеры</p>
+                            <p class="description-whom-item__text">
+                                Вы хотите получить быстрее повышение в карьере, переквалификацию на новую или удаленную профессию. Но боитесь, что надо будет изучить много новой информации.
+                            </p>
+                        </div>
+                        <div class="description-whom-item">
+                            <p class="description-whom-item__label">Помощь во время дистанционного обучения</p>
+                            <p class="description-whom-item__text">
+                                Вы как родитель желаете помочь своим детям в обучении и успеваемости в школе. Но боитесь, что не сможете разобраться в школьном материале.
+                            </p>
+                        </div>
+                        <div class="description-whom-item">
+                            <p class="description-whom-item__label">Повышение эффективности</p>
+                            <p class="description-whom-item__text">
+                                Вы желаете быстро уметь готовиться и сдавать экзамены, зачеты, чтобы хватало времени на отдых, подработку, на личное время, хобби.
+                            </p>
+                        </div>
+                        <div class="description-whom-item">
+                            <p class="description-whom-item__label">
+                                Развитие в декрете или <br>
+                                на карантине
+                            </p>
+                            <p class="description-whom-item__text">
+                                Вам важно максимально эффективно использовать свободное время, чтобы обрести новые навыки для заработка и усилиться в компетенциях. Особенно это важно, когда вы будущая мама или с маленьким ребенком в декрете.
+                            </p>
+                        </div>
                     </div>
-                    <p class="reading-speed__stop">
-                        я уже нечего не успеваю, <span onclick="marqueeStop()">стоп</span>
-                    </p>
                 </div>
             </div>
         </section>
@@ -162,38 +143,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="description-whom">
-                    <h2 class="description-whom__title">Для кого особенно полезен марафон?</h2>
-                    <div class="description-whom-list">
-                        <div class="description-whom-item">
-                            <p class="description-whom-item__label">взрослым</p>
-                            <p class="description-whom-item__text">
-                                желающим получить повышение в карьере, пройти быструю переквалификацию на новую или удаленную профессию
-                            </p>
-                        </div>
-                        <div class="description-whom-item">
-                            <p class="description-whom-item__label">родителям</p>
-                            <p class="description-whom-item__text">
-                                желающим помочь своему ребенку в обучении и успеваемости в школе
-                            </p>
-                        </div>
-                        <div class="description-whom-item">
-                            <p class="description-whom-item__label">студентам</p>
-                            <p class="description-whom-item__text">
-                                желающим быстрее и проще сдавать экзамены, чтобы хватало времени на отдых/подработку
-                            </p>
-                        </div>
-                        <div class="description-whom-item">
-                            <p class="description-whom-item__label">Будущим мамам,<br>
-                                мамам в декрете или <br>
-                                после декрета
-                            </p>
-                            <p class="description-whom-item__text">
-                                желающим максимально эффективно использовать имеющееся время до рождения и  после рождения ребенка
-                            </p>
-                        </div>
-                    </div>
-                </div>
                 <h2 class="author__title">вас будет обучать</h2>
             </div>
         </section>
@@ -201,37 +150,38 @@
             <div class="container">
                 <div class="author-wrapper">
                     <p class="text">
-                        <span class="text__title">автор марафона</span>
-                        Программист, математик, сценарист, психолог-диагност <span class="text__little">(без 5 минут),</span> Главный амбассадор по обучающим навыкам на всем русскоязычном пространстве
+                        <span class="ttl">Aвтор марафона:</span>
+                        Программист, математик, сценарист, психолог-диагност <br>
+                        <span class="text__little">(без 5 минут),</span> 
+                        Главный амбассадор по обучающим навыкам на всем русскоязычном пространстве
                     </p>
                     <div class="author-description">
                         <img src="./assets/images/author.png" alt="Ольга Фуст" class="author-description__photo">
                         <div class="author-description-wrapper">
                             <h3 class="author-description-wrapper__name">Ольга Фуст</h3>
                             <p class="author-description-wrapper__text">
-                                Основатель и эксперт онлайн-школы «Церебрум» по скорочтению, повышению эффективности обучения.
+                                Основатель и эксперт онлайн-школы «Церебрум» по повышению эффективности обучения.
                             </p>
                             <p class="author-description-wrapper__text">
-                                Владелец онлайн-школы «Аметодика», где учатся преподаватели обучающим навыкам и самого большого сайта по быстрому счету, брейн-фитнесу и чтению.
+                                Владелец онлайн-школы «Аметодика», где готовят преподавателей для детей.
                             </p>
                             <p class="author-description-wrapper__text">
-                                Автор книг, пособий, курсов по ментальной арифметике, брейн-фитнесу, воображению, программированию, скорочтению, диагностике.
-                            </p>
-                            <p class="author-description-wrapper__text">
-                                Главный поставщик оборудования и курсов в детские центры, сады и школы.
+                                Автор книг, пособий, курсов по ментальной арифметике, брейн-фитнесу, воображению, программированию, диагностике.
                             </p>
                             <p class="author-description-wrapper__background bg-1">
-                                12 стран
-                                <span>присутствия</span>
-                            </p>
-                            <p class="author-description-wrapper__background bg-2">
                                 960 педагогов
                                 <span>обучено</span>
                             </p>
-                            <p class="author-description-wrapper__background bg-3">
+                            <p class="author-description-wrapper__background bg-2">
                                 10 000+ 
-                                <span>учеников у наших учеников</span>
+                                <span>учеников методики Ольги Фуст</span>
                             </p>
+                            <button class="button" onclick="scrollToElement('.registration')">
+                                <span class="button__label">Записаться на марафон</span>
+                                <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="video">
@@ -240,6 +190,48 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="registration">
+            <h2 class="registration__title">регистрация</h2>
+            <p class="registration__subtitle">на марафон скрчт 2.0</p>
+            <form class="registration-form">
+                <!-- <div class="radio-wrapper">
+                    <label class="custom-radio" for="radio-1">
+                        <input id="radio-1" type="radio" name="status" value="взрослый">
+                        <span class="checkmark">я — взрослый</span>
+                    </label>
+                    <label class="custom-radio" for="radio-2">
+                        <input id="radio-2" type="radio" name="status" value="родитель">
+                        <span class="checkmark">я — родитель</span>
+                    </label>
+                    <label class="custom-radio" for="radio-3">
+                        <input id="radio-3" type="radio" name="status" value="студент">
+                        <span class="checkmark">я — студент</span>
+                    </label>
+                    <label class="custom-radio" for="radio-4">
+                        <input id="radio-4" type="radio" name="status" value="мама">
+                        <span class="checkmark">я — мама</span>
+                    </label>
+                </div> -->
+                <div class="field">
+                    <input type="text" class="field__input" required id="inputName">
+                    <p class="field__label">ваше имя</p>
+                </div>
+                <div class="field">
+                    <input type="text" class="field__input" required id="inputEmail">
+                    <p class="field__label">почта</p>
+                </div>
+                <div class="field fix-label">
+                    <input type="tel" class="field__input" required id="inputPhone">
+                    <p class="field__label">телефон</p>
+                </div>
+                <button type="submit" class="button">
+                    <span class="button__label">записаться на марафон</span>
+                    <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
+                    </svg>
+                </button>
+            </form>
         </section>
         <section class="after">
             <div class="after-wrapper">
@@ -251,7 +243,7 @@
                 <div class="swiper-container swiper-1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <video muted loop class="video-clip" src="./assets/video/girl.mp4"></video>
+                            <video muted loop class="video-clip" src="./assets/video/mather.mp4"></video>
                             <div class="after-description">
                                 <h3 class="after-description__title">
                                     Будущим мамам, мамам в декрете <br>
@@ -265,35 +257,6 @@
                                 </p>
                                 <p class="after-description__item">
                                     используете время декрета для того, чтобы обучиться новой профессии
-                                </p>
-                                <button class="button" onclick="scrollToElement('.registration')">
-                                    <span class="button__label">записаться на марафон</span>
-                                    <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <video  muted loop class="video-clip" src="./assets/video/mather.mp4"></video>
-                            <div class="after-description">
-                                <h3 class="after-description__title">
-                                    У ребенка, школьника, студента, родителя:
-                                </h3>
-                                <p class="after-description__item">
-                                    Сможет лучше учиться в школе, получать выше оценки
-                                </p>
-                                <p class="after-description__item">
-                                    Проще реализовать будущее и выбрать профессию, которую он реально хочет
-                                </p>
-                                <p class="after-description__item">
-                                    Освоить программу школы быстрее и искать работу на цифровые профессии
-                                </p>
-                                <p class="after-description__item">
-                                    Расширят кругозор и быстрее найдут то, что им по душе, по предназначению
-                                </p>
-                                <p class="after-description__item">
-                                    Если ребенок читает быстро, то информацию переварит быстрее и более осознанно
                                 </p>
                                 <button class="button" onclick="scrollToElement('.registration')">
                                     <span class="button__label">записаться на марафон</span>
@@ -366,64 +329,46 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <video muted loop class="video-clip" src="./assets/video/girl.mp4"></video>
+                            <div class="after-description">
+                                <h3 class="after-description__title">
+                                    Будущим мамам, мамам в декрете <br>
+                                    или после декрета
+                                </h3>
+                                <p class="after-description__item">
+                                    включитесь в систему обучения, используя свое время с пользой для себя и для семьи
+                                </p>
+                                <p class="after-description__item">
+                                    активируете процесс познания и обучения новому во время беременности или после декрета
+                                </p>
+                                <p class="after-description__item">
+                                    используете время декрета для того, чтобы обучиться новой профессии
+                                </p>
+                                <button class="button" onclick="scrollToElement('.registration')">
+                                    <span class="button__label">записаться на марафон</span>
+                                    <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
-        <section class="registration">
-            <h2 class="registration__title">регистрация</h2>
-            <p class="registration__subtitle">на марафон скрчт 2.0</p>
-            <form class="registration-form">
-                <div class="radio-wrapper">
-                    <label class="custom-radio" for="radio-1">
-                        <input id="radio-1" type="radio" name="status" value="взрослый">
-                        <span class="checkmark">я — взрослый</span>
-                    </label>
-                    <label class="custom-radio" for="radio-2">
-                        <input id="radio-2" type="radio" name="status" value="родитель">
-                        <span class="checkmark">я — родитель</span>
-                    </label>
-                    <label class="custom-radio" for="radio-3">
-                        <input id="radio-3" type="radio" name="status" value="студент">
-                        <span class="checkmark">я — студент</span>
-                    </label>
-                    <label class="custom-radio" for="radio-4">
-                        <input id="radio-4" type="radio" name="status" value="мама">
-                        <span class="checkmark">я — мама</span>
-                    </label>
-                </div>
-                <div class="field">
-                    <input type="text" class="field__input" required id="inputName">
-                    <p class="field__label">ваше имя</p>
-                </div>
-                <div class="field">
-                    <input type="text" class="field__input" required id="inputEmail">
-                    <p class="field__label">почта</p>
-                </div>
-                <div class="field fix-label">
-                    <input type="tel" class="field__input" required id="inputPhone">
-                    <p class="field__label">телефон</p>
-                </div>
-                <button type="submit" class="button">
-                    <span class="button__label">записаться на марафон</span>
-                    <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
-                    </svg>
-                </button>
-            </form>
-        </section>
         <footer class="footer">
             <div class="container">
                 <div class="footer-wrapper">
-                    <a href="/" class="button">
+                    <a href="https://vk.com/cerebrum.school" target="_blank" class="button">
                         <span class="button__label">вконтакте</span>
                         <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
                         </svg>
                     </a>
-                    <a href="/" class="button">
+                    <a href="https://www.instagram.com/cerebrum.school/" target="_blank" class="button">
                         <span class="button__label">instagram</span>
                         <svg class="button__icon" viewBox="0 0 25 10" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
@@ -449,6 +394,6 @@
     <script src="./libs/validator/validator.min.js"></script>
     <script src="libs/intlTelInput/intlTelInput.min.js"></script>
     <script src="./libs/swiper/swiper.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

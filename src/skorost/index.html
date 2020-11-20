@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-=edge">
+    <title>СКРЧТ 2.0</title>
+    <meta name="application-name" content="СКРЧТ 2.0"/>
+    <meta name="description" content="СКРЧТ 2.0">
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../assets/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../assets/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../assets/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../assets/icons/mstile-310x310.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-128x128.png" sizes="128x128" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="information">
+        <!-- <div class="author-technology">
+            <p class="author-technology__text">
+                авторская технология повышения усвоения <br>
+                информации и внимательности Ольги Фуст
+            </p>
+            <svg viewBox="0 0 25 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4V0H2L2 4H20.4142L18.5858 2.17157L20 0.757359L22.8285 3.58579L24.2427 5L22.8285 6.41421L20 9.24264L18.5858 7.82843L20.4142 6H2H0V4Z"/>
+            </svg>
+        </div> -->
+        <div class="container">
+            <p class="text">
+                <span class="ttl">Только задумайтесь…</span>
+                Вы ежедневно читаете больше 
+                <span class="text__underline">1800 слов в течение дня:</span> 
+                это сообщения в мессенджерах, заголовки новостей, статьи для личного развития.
+                <span class="text__underline">Скорость чтения не растет</span>
+                у человека после 23 лет, а объем потребляемой информации каждый следующий
+                год жизни <span class="text__underline">увеличивается на 14 %.</span>
+            </p>
+            <p class="information-check">
+                Обучение по методике Ольги Фуст, <br>
+                чтобы быстрее изучать информацию
+            </p>
+        </div>
+    </section>
+    <section class="reading-speed">
+        <div class="reading-speed__label">
+            <div class="container">
+                <p class="text">
+                    <span class="text__title">небольшой интерактив</span>
+                    Проверьте скорость чтения. <br>
+                    покажите на что вы способны прямо сейчас
+                </p>
+            </div>
+        </div>
+        <div class="marquee" id="marquee">
+            <div class="marquee__wrapper">
+                <p class="marquee__text">Скачет Илья Муровец во всю конскую прыть. Его конь, Бурушка-Косматушка с горы на гору перескакивает, реки-озера перепрыгивает, холмы перелетает. Доскакали они до Брынских лесов, дальше Бурушке скакать нельзя: разлеглись болота зыбучие, конь по брюхо в воде тонет. Соскочил Илья с коня. Он левой рукой Бурушку поддерживает, а правой рукой дубы с корнем рвет, настилает через болото настилы дубовые. Тридцать верст Илья настилов настелил - до сих пор по ним люди добрые ездят.</p>
+            </div>
+        </div>
+        <p class="reading-speed__information">
+            Потяните за ползунок, для выбора подходящей скорости чтения. <br>
+            Тест нужен для того, чтобы выявить скорость - при которой <br>
+            уже чтение становится не комфортно для вас.
+        </p>
+        <div class="reading-speed-navigation">
+            <div class="container">
+                <p class="reading-speed__number">Ваша скорость чтения:</p>
+                <div class="range-wrapper">
+                    <input type="range" value="0" min="0" max="600" id="range" class="range">
+                    <p class="range-wrapper__value">~ value слов/минута</p>
+                </div>
+                <p class="reading-speed__stop">
+                    я уже нечего не успеваю, <span onclick="marqueeStop()">стоп</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

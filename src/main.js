@@ -106,19 +106,16 @@ var next = function next() {
   if (phrases[counter]) {
     fx.setText(phrases[counter]).then(function () {
       setTimeout(next, 1000);
-      if (counter === phrases.length) {
-        document.querySelector('.skr4t-start').style.opacity = '1';
-      }
     }).catch(function (error) {
       console.log(error);
     });
   }
-
   counter++;
 };
-
 next();
-
+setTimeout(() => {
+  document.querySelector('.skr4t-start').style.opacity = '1';
+}, 2000)
 // MODE
 
 function mode() {
@@ -137,87 +134,25 @@ function mode() {
   })
 }
 
-// MARQUEE AND RANGE
-const range = document.getElementById('range');
-$('#range').ionRangeSlider({
-  skin: "big",
-  grid: true,
-  min: 0,
-  step: 150,
-  max: 600,
-  from: 0
-});
-
-const rangeChange = range.onchange = () => {
-  document.querySelector('.range-wrapper__value').innerHTML = `~${range.value} слов/минута`;
-  if (Number(range.value) < 1) {
-    document.querySelector('.range-wrapper__value').style.opacity = '0';
-    document.querySelector('.reading-speed__number').style.opacity = '0';
-    document.querySelector('.reading-speed__stop').style.opacity = '0';
-  } else {
-    document.querySelector('.range-wrapper__value').style.opacity = '1';
-    document.querySelector('.reading-speed__number').style.opacity = '1';
-    document.querySelector('.reading-speed__stop').style.opacity = '1';
-  }
-  if (Number(range.value) === 150) {
-    handleMarquee(3);
-  } else if (Number(range.value) === 300) {
-    handleMarquee(4);
-  } else if (Number(range.value) === 450) {
-    handleMarquee(5);
-  } else if (Number(range.value) === 600) {
-    handleMarquee(6);
-  } else if (Number(range.value) === 0) {
-    handleMarquee(Number(range.value));
-  }
-}
-
-function handleMarquee(speedNumber) {
-  const marquee = document.querySelectorAll('.marquee');
-  const marqueeElement = document.getElementById('marquee');
-  let speed = speedNumber;
-  if (speed !== 0) {
-    marqueeElement.classList.add('active');
-  } else {
-    marqueeElement.classList.remove('active');
-  }
-  marquee.forEach(function (el) {
-    const container = el.querySelector('.marquee__wrapper');
-    const content = el.querySelector('.marquee__wrapper > *');
-    const elWidth = content.offsetWidth;
-    let progress;
-    if (speedNumber === 0) {
-      progress = 0;
-    } else {
-      progress = window.innerWidth;
-    }
-    function loop() {
-      progress = progress - speed;
-      if (progress <= elWidth * -1) { progress = window.innerWidth; }
-      container.style.transform = 'translateX(' + progress + 'px)';
-      window.requestAnimationFrame(loop);
-    }
-    loop();
-  });
-};
-
-function marqueeStop() {
-  const slider = $("#range").data("ionRangeSlider");
-  handleMarquee(0);
-  slider.update({
-    from: 0
-  });
-}
-
 let clickEvent = 0;
 function scrollToElement(element) {
   if (element === '.main' && clickEvent === 0) {
     clickEvent = 1;
-    document.querySelectorAll('.video-clip')[0].play()
+    document.querySelectorAll('.video-clip')[0].play();
     document.querySelector('.main').setAttribute(
       'style',
       'position: relative; height: auto; overflow: auto;');
     // INIT SWIPER JS
+    if (window.innerWidth > 992) {
+      if (document.querySelector('.header-navigation')) {
+        document.querySelector('.swiper-1').style.height = `
+          ${window.innerHeight - document.querySelector('.header-navigation').offsetHeight}px`;
+      } else {
+        document.querySelector('.swiper-1').style.height = `
+        ${window.innerHeight}px`;
+      }
+    }
+    
     const videoSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: false,
@@ -232,11 +167,12 @@ function scrollToElement(element) {
         320: {
           autoHeight: true
         },
-        768: {
+        992: {
           autoHeight: false
         },
       }
     })
+    
     videoSwiper.on('transitionStart', function (event) {
       const videoElement = document.querySelectorAll('.video-clip');
       videoElement.forEach(el => {
@@ -255,7 +191,7 @@ function scrollToElement(element) {
 const telInput = document.querySelector('#inputPhone');
 const emailInput = document.querySelector('#inputEmail');
 const nameInput = document.querySelector('#inputName');
-const radioInput = document.querySelectorAll('input[type="radio"]');
+// const radioInput = document.querySelectorAll('input[type="radio"]');
 
 const iti = window.intlTelInput(telInput, {
   utilsScript: 'libs/intlTelInput/utils.js',
@@ -264,17 +200,16 @@ const iti = window.intlTelInput(telInput, {
 
 const submitButton = document.querySelector('button[type="submit"]');
 submitButton.classList.add('disabled');
-
 const form = document.querySelector('form');
 let rbValid = false
 form.addEventListener('input', function () {
-  for (const rb of radioInput) {
-    if (rb.checked) {
-      rbValid = true;
-      break;
-    }
-  }
-  if (iti.isValidNumber() && validator.isEmail(emailInput.value) && nameInput.value && rbValid) {
+  // for (const rb of radioInput) {
+  //   if (rb.checked) {
+  //     rbValid = true;
+  //     break;
+  //   }
+  // }
+  if (iti.isValidNumber() && validator.isEmail(emailInput.value) && nameInput.value) {
     submitButton.classList.remove('disabled');
   } else {
     submitButton.classList.add('disabled');

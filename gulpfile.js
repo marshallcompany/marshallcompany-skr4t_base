@@ -5,9 +5,14 @@ const sass = require('gulp-sass');
 const notify = require('gulp-notify');
 const imagesmin = require('gulp-imagemin');
 const del = require('del');
-
+const paths = [
+    {
+        src: './src/sass/**/*.scss',
+        dest: './src'
+    }
+];
 // Browser-sync
-function initBrowserSync() {
+const initBrowserSync = () => {
     browserSync.init({
         server: {
             baseDir: './src'
@@ -18,57 +23,55 @@ function initBrowserSync() {
         port: 8000,
         online: true
     });
-}
-
-// Watch
-function startWatch() {
-    watch('./src/sass/**/*.scss').on('change', series(styles, browserSync.reload));
+    watch('./src/**/*.scss').on('change', parallel(styles, browserSync.reload));
     watch('./src/**/*.html').on('change', browserSync.reload);
     watch('./src/**/*.js').on('change', browserSync.reload);
     watch('./src/**/*.php').on('change', browserSync.reload);
 }
-
 // Styles
-function styles() {
-    return src('./src/sass/**/*.scss')
-    .pipe(sass())
-    .on('error', notify.onError({
-        message: 'Error: <%= error.message %>',
-        title: 'Error'
-    }))
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 versions'],
-        grid: true,
-        cascade: false
-    }))
-    .pipe(dest('./src/styles'));
-}
-
+const styles = (cb) => {
+    cb();
+    paths.forEach(patch => {
+        return src(patch.src)
+        .pipe(sass())
+        .on('error', notify.onError({
+            message: 'Error: <%= error.message %>',
+            title: 'Error'
+        }))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 versions'],
+            grid: true,
+            cascade: false
+        }))
+        .pipe(dest(patch.dest))
+    });
+};
 // Images minification
-function imagesMinification() {
+const imagesMinification = () => {
     return src('./src/**/*.+(jpg|png|ico|svg)', { base: './src' })
     .pipe(imagesmin())
-    .pipe(dest('dist'))
-}
-
-// Remove dir dist
-function removeDirDist() {
+    .pipe(dest('./dist'))
+};
+// Delete dir dist
+const deleteDist = () => {
     return del(['./dist']);
-}
-
-// Build
-function copyFile() {
+};
+// Copy file
+const copyFile = () => {
     return src([
-        './src/js/*.js',
-        './src/styles/*.css',
         './src/libs/**/*.js',
+        './src/libs/**/*.php',
         './src/libs/**/*.css',
+        './src/libs/**/*.map',
         './src/**/*.html',
+        './src/**/*.css',
+        './src/**/*.js',
         './src/**/*.+(otf|ttf|woff|woff2|eot)',
         './src/**/*.+(mov|mp4)'
     ], { base: './src' })
     .pipe(dest('./dist'));
-}
-
-exports.build = series(removeDirDist, imagesMinification, copyFile);
-exports.watch = parallel(styles, initBrowserSync, startWatch);
+};
+// Global
+exports.deleteDist = deleteDist,
+exports.build = series(deleteDist, styles, copyFile, imagesMinification);
+exports.watch = initBrowserSync;
