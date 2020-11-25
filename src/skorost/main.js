@@ -17,12 +17,12 @@ const rangeChange = range.onchange = () => {
     document.querySelector('.range-wrapper__value').style.opacity = '0';
     document.querySelector('.reading-speed__number').style.opacity = '0';
     document.querySelector('.reading-speed__stop').style.opacity = '0';
-    document.querySelector('.reading-speed__information').style.opacity = '1';
+    document.querySelector('.reading-speed__information').style.display = 'block';
   } else {
     document.querySelector('.range-wrapper__value').style.opacity = '1';
     document.querySelector('.reading-speed__number').style.opacity = '1';
     document.querySelector('.reading-speed__stop').style.opacity = '1';
-    document.querySelector('.reading-speed__information').style.opacity = '0';
+    document.querySelector('.reading-speed__information').style.display = 'none';
   }
   if (Number(range.value) === 150) {
     handleMarquee(3);
